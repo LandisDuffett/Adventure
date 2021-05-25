@@ -1,13 +1,14 @@
+using System.Collections.Generic;
+
 namespace Adventure.Models
 {
-  class Item
+  class Door
   {
     public string Name { get; set; }
 
-    public Item(string name)
+    public Door(string name)
     {
       Name = name;
     }
-
   }
 }
