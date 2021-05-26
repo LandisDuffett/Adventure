@@ -29,6 +29,8 @@ Q = quit the game");
           case "c":
             Console.Clear();
             Console.WriteLine(@"
+You may enter any of these commands at any time during the game:
+show commands = list all possible commands
 go <direction> = move your character to the next room 
                  in that direction
 take <item> = take any item available in a room and  
@@ -36,17 +38,22 @@ take <item> = take any item available in a room and
 use <item>  = use any item for its intended and 
               obvious purpose
 see inventory = see all items currently in your 
-                possession");
+                possession
+quit game   = quit the game");
+            Console.WriteLine(@"
+Enter any key to continue.");
+            Console.ReadLine();
             break;
           case "s":
-            Console.Clear();
             game.Start();
             break;
           case "q":
             active = false;
             break;
           default:
-            Console.WriteLine("InvalidSelection");
+            Console.WriteLine("Invalid Selection. Enter any key to go back.");
+            Console.ReadLine();
+            Run();
             break;
         }
       }
